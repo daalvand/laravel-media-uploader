@@ -22,7 +22,7 @@ class UploaderServiceProvider extends ServiceProvider
     public function boot()
     {
         if (! defined('STDIN')) {
-            define('STDIN', fopen('php://stdin', 'r'));
+            define('STDIN', fopen('php://stdin', 'rb'));
         }
 
         $this->registerConfig();
@@ -108,6 +108,6 @@ class UploaderServiceProvider extends ServiceProvider
             __DIR__.'/../Resources/lang' => resource_path('lang/vendor/uploader'),
         ], 'uploader:translations');
 
-        $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'uploader');
+//        $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'uploader');
     }
 }

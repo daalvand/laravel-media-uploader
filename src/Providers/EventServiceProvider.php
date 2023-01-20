@@ -14,8 +14,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        MediaHasBeenAdded::class => [
-            ProcessUploadedMedia::class,
-        ],
+//        MediaHasBeenAdded::class => [
+//            ProcessUploadedMedia::class,
+//        ],
     ];
 }
